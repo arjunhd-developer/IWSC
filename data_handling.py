@@ -31,12 +31,12 @@ class DataHandler:
             self.data_base.append(data_obj)
 
     def home_data(self):
-        self.structure_data()
         self.response = render_template(
             "index.html",
         )
 
     def search_month(self):
+        self.structure_data()
         self.response = None
         self.data_set = []
         for data in self.data_base:
@@ -66,6 +66,7 @@ class DataHandler:
             )
 
     def search_day(self):
+        self.structure_data()
         self.response = None
         self.data_set = []
         for data in self.data_base:
