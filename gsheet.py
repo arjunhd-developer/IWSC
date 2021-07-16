@@ -23,6 +23,7 @@ class Gspread:
         self.main_data = self.main_sheet.get_all_records()
 
     def get_records(self):
+        self.client = gsp.authorize(credentials=creds)
         self.main_sheet = self.client.open("Webinar Schedule 2021") \
             .worksheet("Main Response")
         self.main_data = self.main_sheet.get_all_records()
