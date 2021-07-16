@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Isha Webinar Schedule Checker</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body class="body">
+<header>
+    <h1>Isha Webinar Schedule Checker</h1>
+</header>
+<div class="center_block">
+    <form action="{{ url_for('search_month') }}" class="searchelem">
+        <label for="months">Choose A Month:</label>
+        <select id="months" name="months">
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+        </select>
+        <input type="submit">
+    </form>
+    <br><br><br>
+    <form action="{{ url_for('search_date') }}" class="searchelem">
+        <label for="date_check">Enter Date:</label>
+        <input type="date" id="date_check" name="date_check">
+        <input type="submit">
+    </form>
+    <br><br><br>
+    <div class="searchelem">
+        <a href="{{ url_for('home') }}">Home</a>
+    </div>
+</div>
+</body>
+</html>

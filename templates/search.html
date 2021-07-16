@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Isha Webinar Schedule Checker</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body class="body">
+<header>
+    <h1>Isha Webinar Schedule Checker</h1>
+</header>
+<div class="center_block">
+    <div class="heading">
+        {% if inp == "Month": %}
+            <h2>{{ inp }} : {{ data_set[0]["month"] }} , {{ year }}</h2>
+        {% elif inp == "Date": %}
+            <h2>{{ inp }} : {{ data_set[0]["date"] }}</h2>
+        {% endif %}
+    </div>
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Webinar Name</th>
+        <th>Region</th>
+        <th>Room</th>
+        <th>Start Time</th>
+        <th>Finish Time</th>
+    </tr>
+    {% for data in data_set: %}
+    <tr>
+        <td> {{ data["date"] }} </td>
+        <td> {{ data["name"] }} </td>
+        <td> {{ data["reg"] }} </td>
+        <td> {{ data["room"] }} </td>
+        <td> {{ data["start_time"] }} </td>
+        <td> {{ data["end_time"] }} </td>
+    </tr>
+    {% endfor %}
+</table>
+    <br><br><br>
+    <div class="searchelem">
+        <a href="{{ url_for('home') }}">Home</a>
+    </div>
+</div>
+</body>
+</html>

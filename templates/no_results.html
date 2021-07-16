@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Isha Webinar Schedule Checker</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<header>
+    <h1>Isha Webinar Schedule Checker</h1>
+</header>
+<div class="center_block">
+    {% if input == "month": %}
+        <h2>No Webinars Scheduled For This Month</h2>
+    {% elif input == "date": %}
+        <h2>No Webinars Scheduled On This Date</h2>
+    {% endif %}
+</div>
+<br><br><br>
+    <div class="searchelem">
+        <a href="{{ url_for('home') }}">Home</a>
+    </div>
+</body>
+</html>
