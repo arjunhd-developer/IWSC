@@ -9,7 +9,7 @@ SCOPE = [
     "https://www.googleapis.com/auth/drive"
 ]
 
-SERVICE_ACCOUNT_FILE = "creds.json"
+SERVICE_ACCOUNT_FILE = "google-credentials.json"
 
 creds = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPE)
