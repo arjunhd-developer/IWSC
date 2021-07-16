@@ -4,7 +4,6 @@ from data_handling import DataHandler
 
 
 app = Flask(__name__)
-sheet = Gspread()
 data_handler = DataHandler()
 
 
