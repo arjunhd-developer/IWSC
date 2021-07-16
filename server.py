@@ -1,5 +1,4 @@
 from gsheet import Gspread
-from pprint import pprint
 from flask import Flask
 from data_handling import DataHandler
 
